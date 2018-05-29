@@ -1,0 +1,128 @@
+Overthewire - Bandit Wargames
+
+1: boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+ssh bandit0@bandit.labs.overthewire.org  –p2220
+cat – concatenate files – reads files and writes to standard output stdout
+stdout – Stream where program writes its output data
+
+2: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+
+cat "spaces in this file name"
+cat spaces\ in\ this\ file \name
+
+
+3: UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+
+. 	– hidden
+Ls -la
+Ls –a
+Cat .hidden
+
+4: pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+
+file inhere/*
+cat inhere/-file07
+*	-WildCard, file inhere/* identifies filetype
+/	-placeholder file / shows all files on system
+
+
+5: koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+
+Find –size 1033c
+File *
+
+6: DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+
+Find / 		Shows ALL FILES
+Find / -size –group bandit7 –user bandit6 –size 33c
+
+7: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
+
+Grep [options] [pattern] [file]
+Grep millionth data.txt
+cat data.txt | grep millionth
+
+
+8: cvX2JJa4CFALtqS87jk27qwqGhBM9plV
+
+a|b pipe character
+Passes a -> b
+sort data.txt | uniq -u
+
+9: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+
+Strings – prints readable strings from document
+strings data.txt | grep ==
+
+10: truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+
+Base64 –d data.txt
+
+11: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+
+cat data.txt | tr '[A-Za-z]' '[N-ZA-Mn-za-m]'
+pass read file to translate
+
+
+12: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+
+1. mkdir /tmp/MrNitrogen
+2. cp data.txt /tmp/MrNitrogen
+3. cd /tmp/MrNitrogen
+4. xxd data.txt data.out
+5. file data.out
+6. mv data.out data.gz
+7. gunzip data.gz
+8. file data
+9. mv data data.gz
+10. bunzip2 data.gz
+11. file data
+12. mv data data.gz
+13. gunzip data.gz
+14. file data
+15. cat datatest | tar –x
+16.cat data5.bin | tar –x 
+17. bunzip data6.bin
+18… etc.
+
+UNZIP
+bzip –d data
+gzip2 –d data
+tar xf data
+
+13: 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+
+Ls	[sshkey.private]
+ssh -i sshkey.private bandit14@localhost
+ssh [options] [address]
+ssh			ssh client remote login
+ssh –i			identify file
+sshkey.private	sshkey filename
+@localhost		current filesystem
+
+14: 
+
+Cat /etc/bandit_pass/bandit14 | nc localhost 30000	?
+Cat /etc/bandit_pass/bandit14 |	read file and pass to…
+Nc localhost 30000			nc[netcat] 
+Passwords stored in etc/bandit_pass/bandit[XX]
+
+
+
+
+
+15: BfMYroe26WYalil77FoDi9qh59eK5xNr
+
+cat /etc/bandit_pass/bandit15 | openssl s_client –connect localhost:30001 -quiet
+Openssl  [-connect host:port]				ssl command line tool
+Openssl  s_client			connects to a remote client
+Cat /etc/bandit_pass/bandit15 | 	pass password file
+
+16: cluFn7wTiGryunymYOu4RcffSxQluehd
+
+Nmap [ScanType] [Options] {target specs}
+Nmap –A 					Enable OS/version detection, script scan and traceroute
+less /etc/services			Common Port List
+less /usr/share/nmap/nmap-services	better port list
+
